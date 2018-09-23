@@ -1,0 +1,30 @@
+<!-- https://github.com/webrtc/samples/blob/gh-pages/src/content/datachannel/datatransfer/js/main.js -->
+<h2>Typescript test 1.</h2>
+
+<button (click)="addThing()">Add person</button>
+<li *ngFor="let number of numbersList">
+  {{number}}
+</li>
+
+<hr>
+<div id="buttons">
+  <button (click)="createConnection()" id="startButton">Start</button>
+  <button id="sendButton" disabled>Send</button>
+  <button id="closeButton" disabled>Stop</button>
+</div>
+
+<div id="sendReceive">
+  <span id="send">
+      <h2>Send</h2>
+      <textarea style="height:150px; width:500px;" [(ngModel)]="localSendText"></textarea>
+  </span>
+  <span id="receive">
+      <h2>Receive</h2>
+      <textarea style="height:150px; width:500px;" id="dataChannelReceive" disabled></textarea>
+  </span>
+  <div id=status>
+      <h2>Status</h2>
+      <textarea style="height:250px; width:500px;" [(ngModel)]="statusText"  disabled></textarea>
+  </div>
+</div>
+<hr>
